@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav {
+    background-color: black;
+    height: 60px;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(255, 245, 245);
+    font-size: 20px;
+}
+
+nav p {
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white
+    
+    
+}
