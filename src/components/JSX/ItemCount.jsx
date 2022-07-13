@@ -3,9 +3,11 @@ import '../CSS/ItemCount.css'
 import Swal from "sweetalert2";
 import { Link } from 'react-router-dom'
 
-function ItemCount({stock, initial}) {
+function ItemCount({ stock, onAdd }) {
 
-  const [numero, setNumero] = useState(1);
+  const initial = 1;
+
+  const [numero, setNumero] = useState(initial);
 
   const sumar = () => {
     if (numero < stock) {
@@ -31,9 +33,7 @@ function ItemCount({stock, initial}) {
     }
   };
 
-  const onAdd = () => {
-    console.log(`Se agregaron al carrito ${numero} productos`);
-  };
+
 
   return (
     <>
@@ -51,9 +51,10 @@ function ItemCount({stock, initial}) {
       </section>
       <section className="Counter1">
         <p>{stock > 1 ? `${stock} unidades disponibles` : `Ultima unidad!`}</p>
-        <Link to='/cart'><button className="addCart" onClick={onAdd}>
+        <button className="addCart" onClick={() => onAdd(numero)}>
+        
           Finalizar compra
-        </button></Link>
+        </button>
       </section>
     </>
   );
