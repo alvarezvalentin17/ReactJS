@@ -1,0 +1,2 @@
+.cart { transition: all 0.5s;}
+.cart:hover { color:green; font-size:40px;  } 
