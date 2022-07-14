@@ -40,7 +40,7 @@ export const CartProvider = ({defaultValue = [], children}) => {
 
 
     const IsInCard = (id) => {
-        return cart.find((element)=> element.item === id)
+        return cart.find((element)=> element.item.id === id)
     }
 
     const removeFromCart= (id) => {
